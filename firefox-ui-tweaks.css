@@ -1,0 +1,81 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+.tabbrowser-tab::after,
+.tabbrowser-tab::before {
+    display: none !important;
+}
+
+.tabbrowser-tab:not([selected="true"]) .tab-background {
+    opacity: 0.5 !important;
+    transition: opacity 0.25s ease-in-out !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-background {
+    opacity: 0.9 !important;
+}
+
+#urlbar-background {
+    border-radius: 16px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
+    transition: box-shadow 0.2s ease, border-radius 0.2s ease !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+    border-radius: 10px !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+}
+
+#TabsToolbar {
+    background-color: transparent !important;
+}
+
+#tabbrowser-tabs[orient="vertical"] :is(#tabs-newtab-button, #vertical-tabs-newtab-button) {
+    display: none;
+}
+
+#statuspanel {
+    padding-bottom: 14px !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#statuspanel-inner {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#statuspanel-label {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 6px 12px !important;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+}
+
+.bookmark-item[image^="page-icon:https://github.com"] {
+    background-color: #ffffff !important;
+    border-radius: 8px !important;
+    padding: 2px !important;
+}
+
+.bookmark-item[image^="page-icon:https://github.com"]:hover {
+    background-color: #f0f0f0 !important;
+}
+
+#tabbrowser-tabbox {
+    padding: 10px !important;
+    padding-top: 4px !important;
+    background-color: transparent !important;
+}
+
+#tabbrowser-tabpanels,
+#appcontent,
+.browserContainer,
+.browserStack,
+browser {
+    border-radius: 10px !important;
+    overflow: hidden !important;
+}
