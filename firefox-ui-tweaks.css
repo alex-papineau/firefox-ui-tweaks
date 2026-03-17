@@ -16,13 +16,19 @@
 
 #urlbar-background {
     border-radius: 16px !important;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
-    transition: box-shadow 0.2s ease, border-radius 0.2s ease !important;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2) !important;
+    transition: box-shadow 0.2s ease, border-radius 0.2s ease, border-color 0.2s ease !important;
+    border: 1px solid transparent !important;
+}
+
+#urlbar[focused="true"] #urlbar-background {
+    border-color: #7c4dff !important;
+    box-shadow: 0 0 15px rgba(124, 77, 255, 0.35) !important;
 }
 
 .tabbrowser-tab[selected="true"] .tab-background {
     border-radius: 10px !important;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3) !important;
 }
 
 #TabsToolbar {
@@ -34,9 +40,8 @@
 }
 
 #statuspanel {
-    padding-bottom: 14px !important;
-    padding-left: 14px !important;
-    padding-right: 14px !important;
+    padding-bottom: 16px !important;
+    padding-inline: 16px !important;
     background-color: transparent !important;
     border: none !important;
 }
@@ -47,12 +52,17 @@
 }
 
 #statuspanel-label {
-    background-color: #000000 !important;
-    color: #ffffff !important;
+    background-color: #111111 !important;
+    color: #eeeeee !important;
     border: none !important;
-    border-radius: 8px !important;
-    padding: 6px 12px !important;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4) !important;
+    border-radius: 10px !important;
+    padding: 8px 14px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    max-width: 30vw !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    font-weight: 500 !important;
 }
 
 .bookmark-item[image^="page-icon:https://github.com"] {
@@ -66,8 +76,8 @@
 }
 
 #tabbrowser-tabbox {
-    padding: 10px !important;
-    padding-top: 4px !important;
+    padding: 12px !important;
+    padding-top: 6px !important;
     background-color: transparent !important;
 }
 
@@ -76,6 +86,77 @@
 .browserContainer,
 .browserStack,
 browser {
-    border-radius: 10px !important;
+    border-radius: 12px !important;
     overflow: hidden !important;
+}
+
+.tabbrowser-tab {
+    margin-inline: 2px !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+    display: -moz-box !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-icon-image {
+    -moz-box-ordinal-group: 1 !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-label {
+    -moz-box-ordinal-group: 2 !important;
+}
+
+.tabbrowser-tab:not([pinned]) .tab-close-button {
+    -moz-box-ordinal-group: 3 !important;
+}
+
+findbar {
+    background-color: #111111 !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 10px 18px !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6) !important;
+    margin-block: 20px !important;
+    margin-inline: 20px !important;
+    order: -1 !important;
+}
+
+.findbar-container {
+    padding: 0 !important;
+}
+
+.findbar-textbox {
+    border-radius: 8px !important;
+    padding: 6px 10px !important;
+    border: 1px solid #333 !important;
+    background-color: #222 !important;
+    color: white !important;
+}
+
+#nav-bar {
+    border-top: none !important;
+    background-color: transparent !important;
+}
+
+#sidebar-splitter {
+    width: 2px !important;
+    background-color: #222 !important;
+    border: none !important;
+}
+
+#sidebar-header {
+    display: none !important;
+}
+
+#PersonalToolbar {
+    background-color: transparent !important;
+}
+
+:root {
+    --toolbar-bgcolor: transparent !important;
+    --lwt-accent-color: #0c0c0c !important;
+    --lwt-text-color: #ffffff !important;
+    scrollbar-width: thin !important;
+    scrollbar-color: #444 transparent !important;
 }
