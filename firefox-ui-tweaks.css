@@ -65,16 +65,6 @@
     font-weight: 500 !important;
 }
 
-.bookmark-item[image^="page-icon:https://github.com"] {
-    background-color: #ffffff !important;
-    border-radius: 8px !important;
-    padding: 2px !important;
-}
-
-.bookmark-item[image^="page-icon:https://github.com"]:hover {
-    background-color: #f0f0f0 !important;
-}
-
 #tabbrowser-tabbox {
     padding: 12px !important;
     padding-top: 6px !important;
