@@ -126,3 +126,66 @@ browser {
     scrollbar-width: thin !important;
     scrollbar-color: #444 transparent !important;
 }
+
+#urlbar-container {
+    max-width: 800px !important;
+    margin-inline: auto !important;
+    transition: max-width 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#urlbar-container:focus-within {
+    max-width: 900px !important;
+}
+
+#back-button[disabled="true"],
+#forward-button[disabled="true"],
+#reload-button[disabled="true"] {
+    display: none !important;
+}
+
+.tabbrowser-tab {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease !important;
+}
+
+.tabbrowser-tab:hover {
+    transform: translateY(-2px) !important;
+}
+
+.tabbrowser-tab[selected="true"] {
+    transform: translateY(-1px) !important;
+}
+
+#identity-box,
+#tracking-protection-icon-container {
+    opacity: 0.3 !important;
+    transition: opacity 0.3s ease !important;
+}
+
+#urlbar:hover #identity-box,
+#urlbar:hover #tracking-protection-icon-container,
+#urlbar[focused="true"] #identity-box,
+#urlbar[focused="true"] #tracking-protection-icon-container {
+    opacity: 1 !important;
+}
+
+#sidebar-box {
+    border-radius: 12px !important;
+    margin: 12px 0 12px 12px !important;
+    overflow: hidden !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    background-color: rgba(20, 20, 20, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.toolbarbutton-1 {
+    border-radius: 8px !important;
+    transition: background-color 0.2s ease, transform 0.1s ease !important;
+}
+
+.toolbarbutton-1:hover {
+    background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.toolbarbutton-1:active {
+    transform: scale(0.95) !important;
+}
